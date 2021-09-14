@@ -4,10 +4,10 @@ interface PresenterProps {
     loggedIn?: boolean
 }
 
-export const Presenter: React.FC<PresenterProps> = () => {
+export const Presenter: React.FC<PresenterProps> = ({}) => {
     return (
         <div>
-            hoge
+            hogea
         </div>
     )
 }
