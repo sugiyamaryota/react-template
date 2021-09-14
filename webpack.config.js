@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
+//const Dotenv = require('dotenv-webpack')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 require('dotenv').config()
 
@@ -10,27 +10,27 @@ const plugins = []
 module.exports = (env = {}, argv) => {
     const isProd = argv.mode === 'production'
 
-    if (isProd) {
-        // memo：開発・本番環境でビルドする際に、環境変数を処理するため使用
-        plugins.push(
-            new webpack.EnvironmentPlugin([
-                'NODE_ENV',
-            ])
-        )
-        // memo：ビルド時、Reduxライブラリのグローバス変数を置換するため使用
-        // https://stackoverflow.com/questions/30030031/passing-environment-dependent-variables-in-webpack
-        plugins.push(
-            new webpack.DefinePlugin({
-                'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-            })
-        )
-    } else {
-        plugins.push(
-            new Dotenv({
-                safe: true,
-            })
-        )
-    }
+    // if (isProd) {
+    //     // memo：開発・本番環境でビルドする際に、環境変数を処理するため使用
+    //     plugins.push(
+    //         new webpack.EnvironmentPlugin([
+    //             'NODE_ENV',
+    //         ])
+    //     )
+    //     // memo：ビルド時、Reduxライブラリのグローバス変数を置換するため使用
+    //     // https://stackoverflow.com/questions/30030031/passing-environment-dependent-variables-in-webpack
+    //     plugins.push(
+    //         new webpack.DefinePlugin({
+    //             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    //         })
+    //     )
+    // } else {
+    //     plugins.push(
+    //         new Dotenv({
+    //             safe: true,
+    //         })
+    //     )
+    // }
 
     plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
 
@@ -120,7 +120,8 @@ module.exports = (env = {}, argv) => {
             },
             hot: 'only',
             host: '0.0.0.0',
-            port: process.env.DEV_SERVER_PORT || 3000,
+            //port: process.env.DEV_SERVER_PORT || 3000,
+            port: 3000,
             open: true,
             historyApiFallback: true,
 
