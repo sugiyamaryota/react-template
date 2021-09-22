@@ -15,3 +15,8 @@ npm i typescript @types/react @types/react-dom @types/react-router-dom @types/re
 npm i history
 npm i prettier eslint-plugin-prettier
 ```
+
+以下の問題がある。
+https://github.com/mrsteele/dotenv-webpack/issues/377
+以下の構成に変えたほうが良さそう。
+https://webpack.js.org/guides/production/

@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server --https --config ./webpack.config.js --mode=development"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -49,5 +50,7 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-merge": "^5.8.0"
+  }
 }
