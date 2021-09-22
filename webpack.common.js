@@ -78,8 +78,5 @@ module.exports = {
             template: './public/index.html',
         }),
         new ForkTsCheckerWebpackPlugin(),
-        new Dotenv({
-            safe: false
-        })
     ]
 }
