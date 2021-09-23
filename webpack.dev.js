@@ -1,6 +1,8 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common.js')
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = merge(common,{
    mode: 'development',
@@ -11,4 +13,10 @@ module.exports = merge(common,{
         open: true,
         historyApiFallback: true,
     },
+    plugins: [
+        new ReactRefreshWebpackPlugin(),
+        new Dotenv({
+            safe: true,
+        })
+    ]
 })

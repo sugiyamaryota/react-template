@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
 require('dotenv').config()
 
 module.exports = {
@@ -20,18 +19,18 @@ module.exports = {
     },
     resolve: {
         modules: ['node_modules', path.resolve('./src')],
-        alias: {
-            'react-dom': '@hot-loader/react-dom',
-        },
         extensions: ['.tsx', '.jsx', '.js', '.ts', '.json'],
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx|tsx|ts)$/,
+                test: /\.(js|jsx|ts|tsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        plugins: ['react-refresh/babel'],
+                    }
                 },
             },
             {
@@ -72,7 +71,6 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
         }),
-        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './public/index.html',

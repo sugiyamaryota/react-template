@@ -1,5 +1,7 @@
 /dist
 /node_modules
 *.d.ts
-webpack.config.js
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
 jest.config.js
