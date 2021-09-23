@@ -17,6 +17,7 @@ npm i prettier eslint-plugin-prettier
 ```
 
 react-hot-loaderからreact-refreshへの移行について
+https://github.com/pmmmwh/react-refresh-webpack-plugin/blob/main/docs/TROUBLESHOOTING.md#coming-from-react-hot-loader
 
 ```
 yarn add react-refresh
