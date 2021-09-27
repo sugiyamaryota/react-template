@@ -33,12 +33,20 @@ module.exports = {
                     }
                 },
             },
-            {
-                loader: 'source-map-loader',
-                test: /\.js$/,
-                exclude: /node_modules/,
-                enforce: 'pre',
-            },
+            /**
+             * ToDo:
+             * relayを導入してfetchGraphQL.jsを追加した際、source-map-loaderでエラーが出たので一旦コメントアウトしています
+             * */
+            // {
+            //     test: /\.js$/,
+            //     exclude: /node_modules/,
+            //     enforce: 'pre',
+            //     use: [
+            //         {
+            //             loader: 'source-map-loader',
+            //         }
+            //     ]
+            // },
             {
                 test: /\.svg$/,
                 use: [
