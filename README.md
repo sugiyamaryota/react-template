@@ -43,3 +43,16 @@ https://relay.dev/docs/getting-started/step-by-step-guide/
 
 https://github.com/facebook/relay
 https://github.com/graphql/graphql-js
+
+## Can't resolve 'fs'について
+.babelrcで以下を記述すると解消しました。
+https://github.com/ben-rogerson/twin.macro/issues/327#issuecomment-776460552
+
+## Error: ENOENT: no such file or directory, open ~ __generated__/AppRepositoryNameQuery.graphql.jsについて
+
+yarn relayで`__generated__`が出来ていないことが問題です。
+Appディレクトリからファイルをsrcディレクトリの直下にうつしても改善されませんでした。
+該当のコードはrelayのチュートリアルで実行した内容と遜色がないです。
+tsxだとうまくいかない？
+### relay-compiler TSX
+https://github.com/relay-tools/relay-compiler-language-typescript/blob/master/example/ts/app.tsx

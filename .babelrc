@@ -1,5 +1,8 @@
 {
-    "plugins": ["babel-plugin-macros"],
+    "plugins": [
+        "babel-plugin-macros",
+        "relay"
+    ],
     "presets": [
         [
             "@babel/preset-env",
