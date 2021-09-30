@@ -53,6 +53,9 @@ https://github.com/ben-rogerson/twin.macro/issues/327#issuecomment-776460552
 yarn relayで`__generated__`が出来ていないことが問題です。
 Appディレクトリからファイルをsrcディレクトリの直下にうつしても改善されませんでした。
 該当のコードはrelayのチュートリアルで実行した内容と遜色がないです。
-tsxだとうまくいかない？
+以下も検証してみましたが、どちらかと言うと、`__generated__`の読み込みの指定についてかと思いました。
+https://stackoverflow.com/questions/60758179/typescript-with-relay-cant-resolve-generated-module
+
+tsxだとうまくいかないかもしれません？
 ### relay-compiler TSX
 https://github.com/relay-tools/relay-compiler-language-typescript/blob/master/example/ts/app.tsx
