@@ -35,7 +35,11 @@
       "jest",
     ],
     "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
+    /**
+    * ToDo:
+    * 一旦 isolatedModulesをfalseにしています
+    */
+    "isolatedModules": false,
     "noEmit": true
   },
   "include": [

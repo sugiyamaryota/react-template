@@ -1,4 +1,11 @@
 {
+    "plugins": [
+        "babel-plugin-macros",
+        [
+            "relay",
+            {"artifactDirectory": "./src/App/__generated__"}
+        ]
+    ],
     "presets": [
         [
             "@babel/preset-env",
