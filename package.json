@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn run relay && webpack-dev-server --config webpack.dev.js",
     "build": "yarn run relay && webpack --config webpack.prod.js",
-    "relay": "yarn run relay-compiler --schema schema.graphql --src ./src/ --watchman false $@"
+    "relay": "yarn run relay-compiler  --src ./src --schema schema.graphql --language typescript --artifactDirectory ./src/App/__generated__ --watchman false $@"
   },
   "keywords": [],
   "author": "",
@@ -56,6 +56,7 @@
     "react-refresh": "^0.10.0",
     "react-relay": "^12.0.0",
     "relay-compiler": "^12.0.0",
+    "relay-compiler-language-typescript": "^14.1.2",
     "relay-runtime": "^12.0.0",
     "webpack-merge": "^5.8.0"
   }

@@ -57,5 +57,6 @@ Appディレクトリからファイルをsrcディレクトリの直下にう�
 https://stackoverflow.com/questions/60758179/typescript-with-relay-cant-resolve-generated-module
 
 tsxだとうまくいかないかもしれません？
+jsファイルにしたら成功しました。
 ### relay-compiler TSX
 https://github.com/relay-tools/relay-compiler-language-typescript/blob/master/example/ts/app.tsx

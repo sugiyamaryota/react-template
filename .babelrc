@@ -1,7 +1,10 @@
 {
     "plugins": [
         "babel-plugin-macros",
-        "relay"
+        [
+            "relay",
+            {"artifactDirectory": "./src/App/__generated__"}
+        ]
     ],
     "presets": [
         [

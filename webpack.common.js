@@ -7,7 +7,7 @@ require('dotenv').config()
 module.exports = {
     // ブラウザ環境で使用するためwebをtargetとする
     target: 'web',
-    entry: './src/App/index.js',
+    entry: './src/App/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/',

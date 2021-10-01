@@ -30,6 +30,7 @@ const App = (props) => {
     <div className="App">
       <header className="App-header">
         <p>{data.repository.name}</p>
+        <Router />
       </header>
     </div>
   );

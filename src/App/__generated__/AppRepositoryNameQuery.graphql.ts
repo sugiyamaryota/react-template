@@ -1,24 +1,19 @@
-/**
- * @flow
- */
-
+/* tslint:disable */
 /* eslint-disable */
+// @ts-nocheck
 
-'use strict';
+import { ConcreteRequest } from "relay-runtime";
+export type AppRepositoryNameQueryVariables = {};
+export type AppRepositoryNameQueryResponse = {
+    readonly repository: {
+        readonly name: string;
+    } | null;
+};
+export type AppRepositoryNameQuery = {
+    readonly response: AppRepositoryNameQueryResponse;
+    readonly variables: AppRepositoryNameQueryVariables;
+};
 
-/*::
-import type { ConcreteRequest } from 'relay-runtime';
-export type AppRepositoryNameQueryVariables = {||};
-export type AppRepositoryNameQueryResponse = {|
-  +repository: ?{|
-    +name: string
-  |}
-|};
-export type AppRepositoryNameQuery = {|
-  variables: AppRepositoryNameQueryVariables,
-  response: AppRepositoryNameQueryResponse,
-|};
-*/
 
 
 /*
@@ -30,7 +25,7 @@ query AppRepositoryNameQuery {
 }
 */
 
-const node/*: ConcreteRequest*/ = (function(){
+const node: ConcreteRequest = (function(){
 var v0 = [
   {
     "kind": "Literal",
@@ -110,7 +105,5 @@ return {
   }
 };
 })();
-// prettier-ignore
-(node/*: any*/).hash = 'a688238c5e4b922a38b08d5e6995ca6c';
-
-module.exports = node;
+(node as any).hash = 'a688238c5e4b922a38b08d5e6995ca6c';
+export default node;
