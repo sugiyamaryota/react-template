@@ -12,8 +12,8 @@ v12.13.0
 npm i webpack webpack-cli webpack-dev-server fork-ts-checker-webpack-plugin dotenv dotenv-expand
 npm i html-webpack-plugin babel-loader style-loader css-loader svg-url-loader url-loader source-map-loader
 npm i @babel/core @babel/plugin-external-helpers @babel/preset-env @babel/preset-react @babel/preset-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser
-npm i react react-dom react-scripts react-router-dom connected-react-router redux @reduxjs/toolkit
-npm i typescript @types/react @types/react-dom @types/react-router-dom @types/react-redux @types/node
+npm i react react-dom react-scripts react-router-dom connected-react-router
+npm i typescript @types/react @types/react-dom @types/react-router-dom @types/node
 npm i history
 npm i prettier eslint-plugin-prettier
 ```
@@ -60,3 +60,7 @@ tsxだとうまくいかないかもしれません？
 jsファイルにしたら成功しました。
 ### relay-compiler TSX
 https://github.com/relay-tools/relay-compiler-language-typescript/blob/master/example/ts/app.tsx
+
+Reduxを削除していたが、connected-react-routerがreact-reduxの依存関係を持っています。
+以下に置き換える？
+https://github.com/relay-tools/react-router-relay
